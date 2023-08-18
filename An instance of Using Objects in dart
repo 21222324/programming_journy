@@ -1,0 +1,36 @@
+// An instance of Using Objects in dart 
+
+    class Camera {
+      String? name;
+      String? color;
+      int? megpix;
+      // change value by Setter
+      set changePix(pix){
+         megpix =pix;
+      }
+      // get the the value by Getter.
+      get getPix {
+        return megpix;
+      }
+    
+      void display() {
+          print("Name: $name");
+          print("Color: $color");
+          print("current quality: $megpix MP");
+      }
+    }
+
+    void main(){
+        // Here camera is object of the class Camera. 
+        Camera camera=  Camera();
+        camera.name= 'Samsung a12';
+        camera.color='multicolor';
+        camera.megpix= 32;
+        camera.display();
+        print('Current quality from Getter: ${camera.getPix} MP \n');
+        camera.changePix= 48;
+        print('After updating: ');
+        camera.display();
+      
+     
+    }
