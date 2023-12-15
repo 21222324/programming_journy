@@ -1,25 +1,40 @@
-```c
-#include <stdio.h>
-// a quick example of using recursive functions
-int fact(int a);
-int main() {
-  int x = 0;
-  printf("enter a number: ");
-  scanf("%d", &x);
-  int result = fact(x);
+```dart
+    class Camera {
+      // _ repersent private in dart
+      String? _name;
+      String? _color;
+      int? _megpix;
+      
+      Camera(String name,String color,int megpix){
+        _name = name;
+        _color = color;
+        _megpix = megpix;
+      }
+      // change value by Setter
+      set setPix(pix){
+         _megpix =pix;
+      }
+      // get the the value by Getter.
+      get getPix {
+        return _megpix;
+      }
 
-  printf("%d ", result);
+      void display() {
+          print("Name: $_name");
+          print("Color: $_color");
+          print("Current quality: $_megpix MP");
+      }
+    }
 
-  return 0;
-}
+    void main(){
+        // Here camera is object of the class Camera. 
+        Camera camera=  Camera( 'Samsung a12','multicolor',32 );
+        camera.display();
+        print('Current quality from Getter: ${camera.getPix} MP \n');
+        camera.setPix= 48;
+        print('After updating: ');
+        camera.display();
+
+
+    }
 ```
-
-int fact(int a) {
-  if (a == 1) {
-    return 1;
-  } else if (a == 0)
-    return 0;
-
-  else
-    return fact(a - 1) + fact(a - 2);
-}
