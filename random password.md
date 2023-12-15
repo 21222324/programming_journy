@@ -1,6 +1,6 @@
-// Generat a random password that consist of numbers 
+## Generat a random password that consist of numbers 
 
-
+```dart
 import 'dart:math';
 
 
