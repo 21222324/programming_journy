@@ -1,4 +1,4 @@
-## play tice game
+## tice game
 ```c
 #include<stdio.h>
 #include<stdlib.h>
